@@ -1,107 +1,258 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Virat Kohli</title>
 
-    <!-- Bootstrap -->
+
+    <!-- =========================
+         BOOTSTRAP CSS
+         ========================= -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
           rel="stylesheet">
 
+
+    <!-- =========================
+         CUSTOM CSS
+         ========================= -->
+
     <style>
 
-        /* Page background */
+        /* =========================
+           PAGE BACKGROUND
+           ========================= */
+
         body {
-            background: linear-gradient(135deg, #111827, #1e3a8a);
+
+            background: linear-gradient(
+                135deg,
+                #111827,
+                #1e3a8a
+            );
+
             min-height: 100vh;
+
             padding-top: 50px;
+
+            padding-bottom: 50px;
         }
 
-        /* Main heading */
+
+        /* =========================
+           MAIN HEADING
+           ========================= */
+
         .heading {
+
             color: white;
+
             font-weight: bold;
+
             font-style: italic;
+
             text-shadow: 3px 3px 8px black;
 
             animation: headingAnimation 2s ease-in-out;
         }
 
-        /* Card */
-        .kohli-card {
-            border: none;
-            border-radius: 20px;
 
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
+        /* =========================
+           CAROUSEL
+           ========================= */
+
+        .my-carousel {
+
+            max-width: 900px;
+
+            margin: 0 auto 50px auto;
+
+            border-radius: 20px;
 
             overflow: hidden;
 
-            transition: transform 0.4s ease,
-                        box-shadow 0.4s ease;
+            box-shadow:
+                0px 15px 40px rgba(0, 0, 0, 0.7);
         }
+
+
+        /* Carousel images */
+
+        .my-carousel img {
+
+            height: 450px;
+
+            object-fit: cover;
+        }
+
+
+        /* Carousel caption */
+
+        .my-carousel .carousel-caption {
+
+            background: rgba(0, 0, 0, 0.65);
+
+            border-radius: 15px;
+
+            padding: 15px;
+        }
+
+
+        .my-carousel .carousel-caption h5 {
+
+            color: white;
+
+            font-weight: bold;
+
+            font-size: 25px;
+        }
+
+
+        .my-carousel .carousel-caption p {
+
+            color: white;
+
+            font-style: italic;
+        }
+
+
+        /* =========================
+           KOHLI CARD
+           ========================= */
+
+        .kohli-card {
+
+            border: none;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0px 10px 30px rgba(0, 0, 0, 0.6);
+
+            overflow: hidden;
+
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
 
         /* Card hover animation */
-        .kohli-card:hover {
-            transform: translateY(-15px) scale(1.03);
 
-            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+        .kohli-card:hover {
+
+            transform:
+                translateY(-15px)
+                scale(1.03);
+
+            box-shadow:
+                0px 20px 50px rgba(0, 0, 0, 0.8);
         }
 
-        /* Image */
+
+        /* =========================
+           CARD IMAGE
+           ========================= */
+
         .kohli-card img {
+
             height: 350px;
+
             object-fit: cover;
 
-            transition: transform 0.5s ease;
+            transition:
+                transform 0.5s ease;
         }
 
-        /* Image zoom */
+
+        /* Image zoom when card is hovered */
+
         .kohli-card:hover img {
+
             transform: scale(1.08);
         }
 
-        /* Card title */
+
+        /* =========================
+           CARD TITLE
+           ========================= */
+
         .card-title {
+
             font-weight: bold;
+
             font-style: italic;
+
             color: #1e3a8a;
         }
 
-        /* Description */
+
+        /* =========================
+           CARD DESCRIPTION
+           ========================= */
+
         .card-text {
+
             font-style: italic;
+
             font-weight: 500;
         }
 
-        /* Button */
+
+        /* =========================
+           KNOW MORE BUTTON
+           ========================= */
+
         .btn-custom {
+
             border-radius: 30px;
+
             font-weight: bold;
 
-            transition: transform 0.3s ease,
-                        box-shadow 0.3s ease;
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
         }
+
+
+        /* Button hover animation */
 
         .btn-custom:hover {
+
             transform: scale(1.1);
 
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+            box-shadow:
+                0px 5px 15px rgba(0, 0, 0, 0.4);
         }
 
-        /* Heading animation */
+
+        /* =========================
+           HEADING ANIMATION
+           ========================= */
+
         @keyframes headingAnimation {
 
             from {
+
                 opacity: 0;
-                transform: translateY(-50px);
+
+                transform:
+                    translateY(-50px);
             }
 
             to {
+
                 opacity: 1;
-                transform: translateY(0);
+
+                transform:
+                    translateY(0);
             }
 
         }
@@ -110,87 +261,286 @@
 
 </head>
 
+
 <body>
+
+
+    <!-- =========================
+         MAIN CONTAINER
+         ========================= -->
 
     <div class="container text-center">
 
-        <h1 class="heading mb-4">
+
+        <!-- =========================
+             MAIN HEADING
+             ========================= -->
+
+        <h1 class="heading mb-5">
+
             VIRAT KOHLI
+
         </h1>
+
+
+
+        <!-- ==================================================
+             CAROUSEL START
+             ================================================== -->
+
+        <div id="carouselExampleDark"
+             class="carousel carousel-dark slide my-carousel"
+             data-bs-ride="carousel">
+
+
+            <!-- =========================
+                 CAROUSEL INDICATORS
+                 ========================= -->
+
+            <div class="carousel-indicators">
+
+                <button type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1">
+                </button>
+
+
+                <button type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2">
+                </button>
+
+
+                <button type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3">
+                </button>
+
+            </div>
+
+
+
+            <!-- =========================
+                 CAROUSEL IMAGES
+                 ========================= -->
+
+            <div class="carousel-inner">
+
+
+                <!-- =========================
+                     SLIDE 1
+                     ========================= -->
+
+                <div class="carousel-item active"
+                     data-bs-interval="3000">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8feiudebGvoX-9kViJqvQQPXod7-KRxXFFJu0jdepPQ&s=10"
+                         class="d-block w-100"
+                         alt="Virat Kohli">
+
+
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <h5>
+                            VIRAT KOHLI
+                        </h5>
+
+                        <p>
+                            The King of Indian Cricket
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     SLIDE 2
+                     ========================= -->
+
+                <div class="carousel-item"
+                     data-bs-interval="3000">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8feiudebGvoX-9kViJqvQQPXod7-KRxXFFJu0jdepPQ&s=10"
+                         class="d-block w-100"
+                         alt="Virat Kohli">
+
+
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <h5>
+                            KING KOHLI
+                        </h5>
+
+                        <p>
+                            Passion, aggression and consistency
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     SLIDE 3
+                     ========================= -->
+
+                <div class="carousel-item"
+                     data-bs-interval="3000">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8feiudebGvoX-9kViJqvQQPXod7-KRxXFFJu0jdepPQ&s=10"
+                         class="d-block w-100"
+                         alt="Virat Kohli">
+
+
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <h5>
+                            CRICKET LEGEND
+                        </h5>
+
+                        <p>
+                            One of India's greatest modern cricketers
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 PREVIOUS BUTTON
+                 ========================= -->
+
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"
+                      aria-hidden="true">
+                </span>
+
+                <span class="visually-hidden">
+                    Previous
+                </span>
+
+            </button>
+
+
+
+            <!-- =========================
+                 NEXT BUTTON
+                 ========================= -->
+
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"
+                      aria-hidden="true">
+                </span>
+
+                <span class="visually-hidden">
+                    Next
+                </span>
+
+            </button>
+
+
+        </div>
+
+        <!-- ==================================================
+             CAROUSEL END
+             ================================================== -->
+
+
+
+        <!-- ==================================================
+             VIRAT KOHLI CARD START
+             ================================================== -->
 
         <div class="card kohli-card mx-auto"
              style="width: 22rem;">
+
+
+            <!-- =========================
+                 CARD IMAGE
+                 ========================= -->
 
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8feiudebGvoX-9kViJqvQQPXod7-KRxXFFJu0jdepPQ&s=10"
                  class="card-img-top"
                  alt="Virat Kohli">
 
+
+            <!-- =========================
+                 CARD BODY
+                 ========================= -->
+
             <div class="card-body">
 
+
+                <!-- CARD TITLE -->
+
                 <h2 class="card-title">
+
                     VIRAT KOHLI
+
                 </h2>
 
+
+                <!-- CARD TEXT -->
+
                 <p class="card-text">
+
                     "For 60 overs they should feel like hell out there."
+
                 </p>
 
-                <a href="https://timesofindia.indiatimes.com/sports/cricket/news/watch-they-should-feel-like-hell-when-virat-kohli-delivered-an-iconic-speech-at-lords/articleshow/123331242.cms" class="btn btn-primary btn-custom">
+
+                <!-- KNOW MORE BUTTON -->
+
+                <a href="https://timesofindia.indiatimes.com/sports/cricket/news/watch-they-should-feel-like-hell-when-virat-kohli-delivered-an-iconic-speech-at-lords/articleshow/123331242.cms"
+                   class="btn btn-primary btn-custom">
+
                     Know More
+
                 </a>
 
+
             </div>
-            
-            <div id="carouselExampleDark" class="carousel carousel-dark slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="..." class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="..." class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-
-
 
 
         </div>
 
+        <!-- ==================================================
+             VIRAT KOHLI CARD END
+             ================================================== -->
+
+
     </div>
 
+
+    <!-- ==================================================
+         BOOTSTRAP JAVASCRIPT
+         ================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 
 </html>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+```
+
